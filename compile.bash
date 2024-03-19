@@ -12,6 +12,7 @@ mkdir -p "$build_folder"
 
 # Compile c scripts into the build folder
 gcc InfoFetcher.c -o $build_folder/InfoFetcher" `pkg-config --cflags --libs gtk+-3.0` -Wall
+gcc InstallDNF.c -o $build_folder/InstallDNF"
 
 # Copy files into the build folder
 cp * "$build_folder"
