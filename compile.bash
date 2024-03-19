@@ -11,12 +11,10 @@ build_folder="Builds/$current_datetime"
 mkdir -p "$build_folder"
 
 # Compile c scripts into the build folder
-gcc CDI.c -o "$build_folder/CDI" `pkg-config --cflags --libs gtk+-3.0`
+gcc InfoFetcher.c -o $build_folder/InfoFetcher" `pkg-config --cflags --libs gtk+-3.0` -Wall
 
 # Copy files into the build folder
-cp CDI.c "$build_folder/CDI.c"
-cp README.md "$build_folder/README.md"
-cp LICENSE "$build_folder/LICENSE"
+cp * "$build_folder"
 
 # Create a Version.ini file with the current date and time
 echo "$current_datetime" > "$build_folder/Version.ini"
