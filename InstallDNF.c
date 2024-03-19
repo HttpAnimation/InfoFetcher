@@ -2,7 +2,7 @@
 
 int main() {
     // Run system command
-    system("sudo dnf install libgtk-3-dev");
+    system("sudo dnf install gtk3-devel");
 
     return 0;
 }
