@@ -11,8 +11,8 @@ build_folder="Builds/$current_datetime"
 mkdir -p "$build_folder"
 
 # Compile c scripts into the build folder
-gcc InfoFetcher.c -o $build_folder/InfoFetcher" `pkg-config --cflags --libs gtk+-3.0` -Wall
-gcc InstallDNF.c -o $build_folder/InstallDNF"
+gcc InfoFetcher.c -o "$build_folder/InfoFetcher" `pkg-config --cflags --libs gtk+-3.0` -Wall
+gcc InstallDNF.c -o "$build_folder/InstallDNF"
 
 # Copy files into the build folder
 cp * "$build_folder"
@@ -24,9 +24,9 @@ echo "$current_datetime" > "$build_folder/Version.ini"
 readme_file="$build_folder/README.txt"
 echo "Build created at: $current_datetime" > "$readme_file"
 echo "This folder contains builds for the server and client programs." >> "$readme_file"
-echo "This is auto message and might work or might not." >> "$readme_file"
+echo "This is an auto-generated message and might work or might not." >> "$readme_file"
 
 # Print the path to the build folder
 echo "Builds created at: $build_folder"
-echo "You can also run it by typeing this in"
+echo "You can also run it by typing this in:"
 echo "./$build_folder/CDI"
